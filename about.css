@@ -26,10 +26,7 @@ h3 {
     box-shadow: 0px 0px 2px #00000029;
     border: 1px solid #24b6f7;
     border-radius: 9px;
-}
-/*Content Visuals*/
-
-nav {
+}nav {
     background: #24B6F7;
     margin: auto;
     width: 90%;
@@ -78,7 +75,7 @@ nav {
             text-shadow: 0px 3px 6px #0000007C;
         }
 
-main {/*aspect ratio on both pages*/
+main {/*reverse and insert aspect ratio on both pages*/
     background-image: linear-gradient(to bottom, #24B6F7, #24B6F7, #D0EFFD, #F2FBFE);
     background-size: cover;
     display: flex;
@@ -96,7 +93,7 @@ main {/*aspect ratio on both pages*/
     }
     main > div.heroImg > div#MainImg {
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-end;
         align-items: center;
         flex-basis: 50%;
     }
@@ -107,24 +104,15 @@ main {/*aspect ratio on both pages*/
     }
     main > div.heroImg > div.content {
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
+        justify-content: flex-start;
+        align-items: flex-start;
         flex-direction: column;
         flex-basis: 50%;
      }
     main > div.heroImg > div.content > h3 {
-        text-align: right;
+        text-align: left;
         display: flex;
      }
-    main > div.heroImg > div.content > p {
-        text-align: right;
-        line-height: 1.3;
-        display: flex;
-    }
-    main > div.heroImg > div.content > button {
-        margin-top: 5%;
-        display: flex;
-    }
     main > img#Img {
         display: flex;
         margin: auto;
@@ -133,160 +121,194 @@ main {/*aspect ratio on both pages*/
         margin-bottom: 10%;
     }
 
-
-section.MyWork {
-    margin: auto;
+section.AboutMe {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: auto;
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
 }
-    section.MyWork > div#row {
+    section.AboutMe > div#Logo {
         display: flex;
-        flex-direction: row;
-        flex-basis: 100%;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: center;
+        flex-basis: 50%;
     }
-    section.MyWork > div#row > div.Work {
+    section.AboutMe > div#Logo > img#MainLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 80%;
+        height: 80%;
+    }
+    section.AboutMe > div#AboutContent {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+    section.AboutMe > div#AboutContent > h2 {
+        display: flex;
+        text-align: left;
+        margin-left: 5%;
+    }
+    section.AboutMe > div#AboutContent > p {
+        display: flex;
+        text-align: left;
+        margin-left: 5%;
+        line-height: 1.8;
+    }
+    section.AboutMe > div#AboutContent > button {
+        margin-top: 5%;
+        display: flex;
+        margin-left: 2%;
+        margin-bottom: 10%;
+        text-align: left;
+    }
+
+section.Skills {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 10%;
+}
+    section.Skills > div#CareerSoFar {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        flex-basis: 30%;
+        flex-basis: 75%;
     }
-    section.MyWork > div#row > div.Work > p {  
-            text-align: left; 
-            flex-wrap: wrap;
-            line-height: 1.3;
+        section.Skills > div#CareerSoFar > h2 {
+            display: flex;
+            justify-content: flex-start;
+            text-align: left;
         }
-    section.MyWork > div#row > div.column {
+        section.Skills > div#CareerSoFar > div#SkillsRow {
+            display: flex;
+            flex-basis: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        section.Skills > div#CareerSoFar > div#SkillsRow > div.container_01 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 20%;
+            margin-right: 5%;
+            order: 1;
+        }
+            section.Skills > div#CareerSoFar > div#SkillsRow > div.container_01 > p {
+                display: flex;
+                line-height: 1.8;
+            }
+        section.Skills > div#CareerSoFar > div#SkillsRow > div.container_02 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 20%;
+            margin-right: 10%;
+            order: 2;
+        }
+            section.Skills > div#CareerSoFar > div#SkillsRow > div.container_02 > p {
+                display: flex;
+                line-height: 1.8;
+            }
+        section.Skills > div#CareerSoFar > div#SkillsRow > div.container_03 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 30%;
+            margin-right: 5%;
+            order: 3;
+        }
+            section.Skills > div#CareerSoFar > div#SkillsRow > div.container_03 > p {
+                display: flex;
+                line-height: 1.8;
+            }
+    section.Skills > div#Tools {
+        background-image: linear-gradient(to top,#24B6F7, #24B6F7, #D0EFFD, #F2FBFE);
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        align-items: flex-start;
+        flex-basis: 25%;
     }
-        #Work {
+        section.Skills > div#Tools > h3 {
             display: flex;
-            min-width: 309px;
-            min-height: 111px;
+            text-align: left;
+            margin-top: 30%;
+            margin-left: 5%;
+        }
+        section.Skills > div#Tools > div#ToolsRow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 5%;
             flex-basis: 100%;
-            height: 100%;
-            /*figure out what to put here*/
         }
-        div.container_01 {
+        section.Skills > div#Tools > div#ToolsRow > div#Column {
             display: flex;
-            margin-bottom: 10%;
+            flex-direction: column;
+            margin-right: 25%;
         }
-            /*div.container_01:hover {
-            content: url("#")
-            }*/
-        div.container_02 {
+        section.Skills > div#Tools > div#ToolsRow > div#Column > p {
             display: flex;
-            margin-bottom: 10%;
+            text-align: left;
+            margin-bottom: 2%;
+            line-height: 1.8;
+            flex-basis: 100%;
+            /*why are some lines double??*/
         }
-            /*div.container_02:hover {
-                content: url("#")
-            }*/
-        div.container_03 {
-            display: flex;
-            margin-bottom: 10%;
-        }
-            /*div.container_03:hover {
-                content: url("#")
-            }*/
-        div.container_04 {
-            display: flex;
-            margin-bottom: 10%;
-        }
-        /*div.container_04:hover {
-            content: url("#")
-        }*/
-        section.MyWork > hr {
-            width: 62%;
-            height: 1%;
-            background-color: #0089C6;
-            margin: auto;
-            display: flex;
-            margin-top: 10%;
-            margin-bottom: 10%;
-            }
 
-section.MyDesign {
-        margin: auto;
-        display: flex;
-        width: 90%;
-        padding-left: 5%;
-        padding-right: 5%;
+section.FeaturedProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 10%;
 }
-    section.MyDesign > div#row {
+    section.FeaturedProjects > h2 {
         display: flex;
-        flex-direction: row;
-        width: 100%;
+        margin-bottom: 3%;
     }
-    section.MyDesign > div#row > div.Design {
+    section.FeaturedProjects > div#ProjectRow {
+        display: flex;
+        margin-bottom: 3%;
+        flex-direction: row;
+        flex-basis: 70%;
+        justify-content: space-evenly;
+    }
+    section.FeaturedProjects > div#ProjectRow > div#Column {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        flex-basis: 30%;
+        justify-content: space-between;
     }
-    section.MyDesign > div#row > div.Design > p {
-        text-align: left;
-        flex-wrap: wrap; 
-        line-height: 1.3;
-    }
-    section.MyDesign > div#row > div.designOptions {
+    section.FeaturedProjects > div#ProjectRow > div#Column > div.container_01 {
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        flex-basis: 70%;
+        margin-bottom: 10%;
     }
-        div#row > div.designOptions > div.column { 
-            display: flex;
-            flex-direction: column; 
-        }
-        div.flex-container_01 {
-           display: flex;
-           margin-bottom: 10%;
-        }
-            /*div.flex-container_01:hover {
-               content: url("images/CaseStudyOneHover.png")
-            }*/
-        div.flex-container_02 {
-            display: flex;
-            margin-bottom: 10%;
-        }
-            /*div.flex-container_02:hover {
-                content: url("images/CaseStudyTwoHover.png")
-            }*/
-        div.flex-container_03 {
-            display: flex;
-            margin-bottom: 10%;
-        }
-            /*div.flex-container_03:hover {
-                content: url("images/CaseStudyThreeHover.png")
-            }*/
-        div.flex-container_04 {
-            display: flex;
-            margin-bottom: 10%;
-        }
-            /*div.flex-container_04:hover {
-                content: url("images/CaseStudyFourHover.png")
-            }*/
-        div.flex-container_05 {
-            display: flex;
-            margin-bottom: 10%;
-        }
-            /*div.flex-container_05:hover {
-                content: url("images/CaseStudyFourHover.png")
-            }*/
-        div.flex-container_06 {
-            display: flex;
-            margin-bottom: 10%;
-        }
-            /*div.flex-container_06:hover {
-                content: url("images/CaseStudyFourHover.png")
-            }*/
-    section.MyDesign > div#row > div.designOptions > div.column > div.flex-container_01 > button {
-        /*how to align bottom left*/
+    section.FeaturedProjects > div#ProjectRow > div#Column > div.container_02 {
+        display: flex;
+        margin-bottom: 10%;
+    }
+    section.FeaturedProjects > div#ProjectRow > div#Column > div.container_03 {
+        display: flex;
+        margin-bottom: 10%;
+    }
+    section.FeaturedProjects > div#ProjectRow > div#Column > div.container_04 {
+        display: flex;
+        margin-bottom: 10%;
+    }
+    section.FeaturedProjects > div#ProjectRow > div#Column > div.container_01 {
+        /*figure out how to align items in bottom left when hovered over*/
+    }
+    section.FeaturedProjects > div#DesignsButton {
+        display: flex;
+        margin-bottom: 10%;
     }
 
 section.MyContact {
