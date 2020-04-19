@@ -21,10 +21,12 @@ h3 {
 }
 
 #button {
-    width: 9.9%;
-    height: auto;
-    max-width: 135px;
     position: absolute;
+    background-color: rgb(56, 195, 255);
+    color: white;
+    box-shadow: 0px 0px 2px #00000029;
+    border: 1px solid #24b6f7;
+    border-radius: 9px;
 }
 /*Content Visuals*/
 
@@ -40,7 +42,7 @@ nav {
         flex-direction: row;
     }
     #NavLogo {
-        width: 3%;
+        width: 5%;
         height: auto;
         position: absolute;
         display: flex;
@@ -106,17 +108,16 @@ main {
         align-items: flex-end;
         flex-direction: column;
      }
+    main > div.heroImg > div.content > h3 {
+        text-align: right;
+     }
     main > div.heroImg > div.content > p {
         width: 50%;
         text-align: right;
+        line-height: 1.3;
         
     }
     main > div.heroImg > div.content > button {
-        background-color: rgb(56, 195, 255);
-        color: white;
-        box-shadow: 0px 0px 2px #00000029;
-        border: 1px solid #24b6f7;
-        border-radius: 9px;
         margin-top: 5%;
     }
     main > img#Img {
@@ -124,114 +125,92 @@ main {
         margin: auto;
         text-align: center;
         margin-top: 10%;
+        margin-bottom: 10%;
     }
 
 
 section.MyWork {
     margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
 }
-    #Work {
-    width: 50%;
-    height: auto;
-    position: absolute;
-    display: flex;
-    }
     section.MyWork > div#row {
         display: flex;
         flex-direction: row;
-        width: 100%;
+        flex-basis: 100%;
+        justify-content: space-between;
     }
-    section.MyWork > div#myWork > div.Work {
+    section.MyWork > div#row > div.Work {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex: 1;
+    }
+    section.MyWork > div#row > div.Work > p {  
+            text-align: left; 
+            flex-wrap: wrap;
+            line-height: 1.3;
+        }
+    section.MyWork > div#row > div.column {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        width: 30%;
-        height: 30%;
+        flex: 3;
     }
-    section > div#myWork > div.Work > p {  
-            width: 30%;
-            text-align: left; 
-            height: 25%;
-            position: absolute;
-            flex-wrap: wrap;
-        }
-    section > div#myWork > div.column {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        height: 30%;
-        flex: 25%;
-    }
-        div.container_01 {
-            height: auto;
-            width: 75%;
+        #Work {
             display: flex;
-            margin-bottom: 30%;
-            position: absolute;
+            min-width: 309px;
+            min-height: 111px;
+            /*figure out what to put here*/
+        }
+        div.container_01 {
+            display: flex;
+            margin-bottom: 10%;
         }
             /*div.container_01:hover {
             content: url("#")
             }*/
         div.container_02 {
-            height: auto;
-            width: 75%;
             display: flex;
-            margin-bottom: 30%;
-            position: absolute;
+            margin-bottom: 10%;
         }
             /*div.container_02:hover {
                 content: url("#")
             }*/
         div.container_03 {
-            height: auto;
-            width: 75%;
             display: flex;
-            margin-bottom: 30%;
-            position: absolute;
+            margin-bottom: 10%;
         }
             /*div.container_03:hover {
                 content: url("#")
             }*/
         div.container_04 {
-            height: auto;
-            width: 75%;
             display: flex;
-            margin-bottom: 30%;
-            position: absolute;
+            margin-bottom: 10%;
         }
         /*div.container_04:hover {
             content: url("#")
         }*/
         section.MyWork > hr {
             width: 62%;
-            height: 1px;
+            height: 1%;
             background-color: #0089C6;
             margin: auto;
-            border-width: none;
             display: flex;
-            text-align: center;
             margin-top: 10%;
+            margin-bottom: 10%;
             }
 
 section.MyDesign {
         margin: auto;
         display: flex;
-        flex-direction: row;
         width: 90%;
         padding-left: 5%;
         padding-right: 5%;
 }
-    #Design {
-        width: 40.5%;
-        height: auto;
-        display: flex;
-        position: absolute;
-    }
     section.MyDesign > div#row {
         display: flex;
         flex-direction: row;
@@ -239,154 +218,183 @@ section.MyDesign {
     }
     section.MyDesign > div#row > div.Design {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between; 
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-basis: 30%;
     }
     section.MyDesign > div#row > div.Design > p {
-        width: 23%;
-        height: 25%; 
-        text-align: left; 
+        text-align: left;
+        flex-wrap: wrap; 
+        line-height: 1.3;
     }
-        div.rows > div.column {
-            float: right;
-            width: 33.33%;
-            padding: auto; 
+    section.MyDesign > div#row > div.designOptions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-basis: 70%;
+    }
+        div#row > div.designOptions > div.column { 
             display: flex;
             flex-direction: column; 
         }
         div.flex-container_01 {
-            position: relative;
-            color: white;
-            text-align: right;
+           display: flex;
+           margin-bottom: 10%;
         }
             /*div.flex-container_01:hover {
                content: url("images/CaseStudyOneHover.png")
             }*/
         div.flex-container_02 {
-            position: relative;
-            color: white;
-            text-align: right;
+            display: flex;
+            margin-bottom: 10%;
         }
             /*div.flex-container_02:hover {
                 content: url("images/CaseStudyTwoHover.png")
             }*/
         div.flex-container_03 {
-            position: relative;
-            color: white;
-            text-align: right;
+            display: flex;
+            margin-bottom: 10%;
         }
             /*div.flex-container_03:hover {
                 content: url("images/CaseStudyThreeHover.png")
             }*/
         div.flex-container_04 {
-            position: relative;
-            color: white;
-            text-align: right;
+            display: flex;
+            margin-bottom: 10%;
         }
             /*div.flex-container_04:hover {
                 content: url("images/CaseStudyFourHover.png")
             }*/
         div.flex-container_05 {
-            position: relative;
-            color: white;
-            text-align: right;
+            display: flex;
+            margin-bottom: 10%;
         }
             /*div.flex-container_05:hover {
                 content: url("images/CaseStudyFourHover.png")
             }*/
         div.flex-container_06 {
-            position: relative;
-            color: white;
-            text-align: right;
+            display: flex;
+            margin-bottom: 10%;
         }
             /*div.flex-container_06:hover {
                 content: url("images/CaseStudyFourHover.png")
             }*/
-    div.rows > button {
-        background-color: rgb(56, 195, 255);
-        color: white;
-        box-shadow: 0px 0px 2px #00000029;
-        border: 1px solid #24b6f7;
-        border-radius: 9px;
-        opacity: 1;
-        vertical-align: center;
+    section.MyDesign > div#row > div.designOptions > div.column > div.flex-container_01 > button {
+        /*how to align bottom left*/
     }
 
 section.MyContact {
     display: flex;
-    flex-direction: row;
     margin: auto;
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
 }
+    section.MyContact > div#row {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+    }
+    section.MyContact > div#row > div.Contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-basis: 40%;
+    }
+    section.MyContact > div#row > div.Contact > p {
+       line-height: 1.3;
+    }
+    div.Contact > ul > li {
+        margin-bottom: 2%;
+    }
     #contact {
-        width: 5.1%;
+        width: 15%;
         height: auto;
-        max-width: 70px;
-        position: absolute;
+        vertical-align: middle;
     }
-    section.MyContact > ul > li {
-        vertical-align: center;
+    #italic {
+       font-style: italic; 
     }
-    section.MyContact > br {
-            display: block;
-            margin-bottom: 28px;
-            font-size: 28px;
-            line-height: 28px;
-        }
-        .ContactLinks {
-            background-image: linear-gradient(to top,#24B6F7, #24B6F7, #D0EFFD, #F2FBFE);
-        }
-        .ContactLinks > h3 {
-            margin-left: 20px;
-        }
-        .ContactLinks > ul > li {
-            margin: auto;
-            padding: 0px 5px;
-            margin-right: 3%;
-        }
+    section.MyContact > div#row > div.ContactLinks {
+        background-image: linear-gradient(to top,#24B6F7, #24B6F7, #D0EFFD, #F2FBFE);
+        flex-basis: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    .ContactLinks > h3 {
+        margin-left: 20px;
+        padding-top: 5%;
+    }
+    .ContactLinks > ul > li {
+        margin-right: 3%;
+        margin-bottom: 2%;
+        display: flex;
+        justify-content: flex-start;
+    }
 
 footer {
         background: #24B6F7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         margin: auto;
         width: 90%;
         padding-left: 5%;
         padding-right: 5%;
+        align-items: flex-end;
     }
-        #FootLogo {
-            width: 8%;
-            height: auto;
-            display: flex;
-            position: absolute;
-        }
-        footer > div.footer {
+        footer > div.footerLogo {
             display: flex;
             flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            flex-basis: 40%;
         }
-        
-        footer > div.footerlogo > p {
+        #FootLogo {
+            width: 30%;
+            height: auto;
+            display: flex;
+        }
+        footer > div.footerLogo > p {
+            text-decoration: none;
+            font-style: italic;
+            color: white;
+            text-shadow: 0px 3px 6px #0000007C;
+            margin-left: -10%;
+            margin-right: 10%;
+        }
+        footer > div#footercolumn {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 30%;
+        }
+        footer > div#footercolumn > div.top > p {
             text-decoration: none;
             color: white;
             text-shadow: 0px 3px 6px #0000007C;
         }
-        footer > div.top {
+        footer > div#footercolumn > div.top {
             display: flex;
-            width: 65%;
-            align-items: flex-start;
             justify-content: flex-end;
+            justify-content: space-between;
         }
-        footer > div.top > li:hover {
+        footer > div#footercolumn > div.top > p:hover {
             color: #003143;
             text-shadow: 0px 3px 6px #0000007C;
         }
-        footer > div.bottom {
-            display: flex;
-            width: 65%;
-            align-items: flex-end;
-            justify-content: flex-end;
+        footer > div#footercolumn > div.bottom > p {
+            text-decoration: none;
+            color: white;
+            text-shadow: 0px 3px 6px #0000007C;
         }
-        footer > div.bottom > li:hover {
+        footer > div#footercolumn > div.bottom {
+            display: flex;
+            justify-content: flex-end;
+            justify-content: space-between;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        footer > div#footercolumn > div.bottom > p:hover {
             color: #003143;
             text-shadow: 0px 3px 6px #0000007C;
         }
